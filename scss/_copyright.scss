@@ -1,0 +1,29 @@
+.copyrigh {
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 580px) {
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 30px;
+    }
+  }
+}
+.copyright {
+  &__text {
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 120%;
+  }
+}
+.developers {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+}

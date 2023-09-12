@@ -1,0 +1,25 @@
+.grid-area {
+  &__city {
+    grid-area: city;
+  }
+
+  &__salary {
+    grid-area: salary;
+  }
+
+  &__format {
+    grid-area: format;
+  }
+
+  &__format {
+    grid-area: format;
+  }
+
+  &__type {
+    grid-area: type;
+  }
+
+  &__buttons {
+    grid-area: buttons;
+  }
+}

@@ -1,0 +1,11 @@
+.foter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 27px;
+
+  @media screen and (max-width: 320px) {
+    gap: 16px;
+  }
+}

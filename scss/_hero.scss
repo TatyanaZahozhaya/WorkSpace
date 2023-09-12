@@ -1,0 +1,103 @@
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 57px 0;
+  margin-bottom: 100px;
+
+  @media screen and (max-width: 1024px) {
+    padding: 53px 0;
+    margin-bottom: 80px;
+  }
+
+  @media screen and (max-width: 768px) {
+    gap: 10px;
+    padding: 40px 0;
+    margin-bottom: 60px;
+  }
+  @media screen and (max-width: 560px) {
+    padding: 40px 0 254px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__title {
+    font-size: 90px;
+    font-weight: 400;
+    line-height: 120%;
+    color: rgba(23, 23, 23, 1);
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+
+    @media screen and (max-width: 1330px) {
+      font-size: 64px;
+      letter-spacing: 1.28px;
+    }
+
+    @media screen and (max-width: 1120px) {
+      font-size: 52px;
+    }
+    @media screen and (max-width: 700px) {
+      font-size: 32px;
+      letter-spacing: 0.64px;
+    }
+
+    &_emphasized {
+      color: rgba(42, 24, 255, 1);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -39px;
+      top: 0;
+      width: 421px;
+      height: 330px;
+      background: url("../img/laptop.png") no-repeat center/contain;
+
+      @media screen and (max-width: 1330px) {
+        width: 421px;
+        height: 330px;
+      }
+
+      @media screen and (max-width: 1120px) {
+        width: 340px;
+        height: 340px;
+      }
+      @media screen and (max-width: 836px) {
+        width: 269px;
+        height: 269px;
+      }
+      @media screen and (max-width: 500px) {
+        right: 0;
+        top: 100px;
+      }
+    }
+  }
+
+  &__picture-part {
+    position: absolute;
+    right: -3%;
+    z-index: -1;
+
+    @media screen and (max-width: 320px) {
+      position: static;
+    }
+  }
+
+  &__img {
+    max-height: 421px;
+    max-width: 421px;
+
+    @media screen and (max-width: 1024px) {
+      max-height: 340px;
+      max-width: 340px;
+    }
+
+    @media screen and (max-width: 850px) {
+      max-height: 269px;
+      max-width: 269px;
+    }
+  }
+}

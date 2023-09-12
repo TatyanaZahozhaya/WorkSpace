@@ -1,0 +1,63 @@
+.card {
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 44px max-content;
+    padding: 16px;
+    gap: 12px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 1);
+  }
+
+  &__logo {
+    height: 44px;
+  }
+
+  &__img {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__description {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto auto;
+    gap: 8px;
+    justify-content: start;
+  }
+
+  &__company-name {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 120%;
+    color: rgba(23, 23, 23, 1);
+  }
+
+  &__position {
+    width: fit-content;
+    display: flex;
+    padding: 3px 5px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    background: rgba(234, 236, 255, 1);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 120%;
+  }
+
+  &__position-description-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__position-description {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 120%;
+    color: rgba(204, 204, 204, 1);
+  }
+}

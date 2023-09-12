@@ -1,0 +1,39 @@
+.button {
+  border: none;
+  display: flex;
+  padding: 12px 32px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 120%;
+  outline: 1px solid transparent;
+  border: 2px solid transparent;
+
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+  }
+
+  &_default {
+    background: rgba(166, 173, 255, 1);
+    color: rgba(23, 23, 23, 1);
+  }
+
+  &_unactive {
+    background: rgba(238, 238, 244, 1);
+    color: rgba(23, 23, 23, 1);
+  }
+
+  &:hover {
+    color: rgba(255, 255, 255, 1);
+    background: rgba(42, 24, 255, 1);
+  }
+  &:active {
+    border: 2px solid rgba(79, 88, 190, 1);
+  }
+
+  &:focus-visible {
+    outline: 1px solid rgba(42, 24, 255, 1);
+  }
+}

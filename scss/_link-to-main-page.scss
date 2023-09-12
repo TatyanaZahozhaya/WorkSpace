@@ -1,0 +1,23 @@
+.link-to-main-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  &__text {
+    color: rgba(23, 23, 23, 1);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 120%;
+
+    &_emphasized {
+      font-weight: 600;
+      color: rgba(42, 24, 255, 1);
+    }
+
+    &_emphasized-plain {
+      font-weight: 600;
+      color: rgba(166, 173, 255, 1);
+    }
+  }
+}

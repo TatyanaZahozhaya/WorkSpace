@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work Space</title>
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="js/index.js" defer></script>
+  </head>
+  <body>
+    <div class="content-container">
+      <header class="header">
+        <div class="link-to-main-page">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="17"
+            height="16"
+            viewBox="0 0 17 16"
+            fill="none"
+          >
+            <path d="M2 1H16V5" stroke="#171717" stroke-width="1.5" />
+            <path d="M15 13H1V9" stroke="#171717" stroke-width="1.5" />
+            <path d="M5 14.5H10.5" stroke="#171717" stroke-width="2" />
+          </svg>
+          <span
+            class="link-to-main-page__text link-to-main-page__text_emphasized"
+            >Work</span
+          >
+          <span class="link-to-main-page__text"> Space</span>
+        </div>
+        <a
+          href="#vacancies"
+          class="button button_default header__link-to-vacancies"
+          >Посмотреть вакансии</a
+        >
+      </header>
+
+      <main class="main">
+        <section class="hero">
+          <h1 class="hero__title">
+            Найди работу
+            <p class="hero__title hero__title_emphasized">своей мечты</p>
+          </h1>
+        </section>
+
+        <div class="items-section" id="vacancies">
+          <div class="filters-section">
+            <button class="filters-section__toggle-button">Фильтр
+              <img src="img/arrow-icon_blue.svg" alt="" class="filters-section__arrow-icon">
+            </button>
+
+            <form name="filters" class="filters filters_hidden">
+              <div class="filters__header">
+                <h2 class="filters__title">Фильтр</h2>
+                <button type="reset" class="filters__reset-button">
+                  Очистить
+                </button>
+              </div>
+              <fieldset class="filters__fieldset grid-area__city">
+                <legend class="filters__legend">Город</legend>
+                <select
+                  name="city"
+                  id="city"
+                  class="input-elem input-elem__select"
+                >
+                  <option value="" class="input-elem__option">
+                    Выбрать город
+                  </option>
+                </select>
+              </fieldset>
+              <fieldset class="filters__fieldset grid-area__salary">
+                <legend class="filters__legend">Заработная плата</legend>
+                <div class="filters__range-container">
+                  <input
+                    type="number"
+                    name="pay-from"
+                    id="pay-from"
+                    placeholder="от"
+                    class="input-elem"
+                  />
+                  <input
+                    type="number"
+                    name="pay-to"
+                    id="pay-to"
+                    placeholder="до"
+                    class="input-elem"
+                  />
+                </div>
+              </fieldset>
+
+              <fieldset class="filters__fieldset grid-area__format">
+                <legend class="filters__legend">Формат</legend>
+                <div class="filters__inputs-container">
+                  <label class="checkbox-elem__container">
+                    <input
+                      type="checkbox"
+                      name="format"
+                      value="Офис"
+                      class="checkbox-elem"
+                    />
+                    <span class="checkbox-elem__new-tick"></span>
+                    <span class="checkbox-elem__label">Офис</span>
+                  </label>
+                  <label class="checkbox-elem__container">
+                    <input
+                      type="checkbox"
+                      name="format"
+                      value="Удаленный"
+                      class="checkbox-elem"
+                    />
+                    <span class="checkbox-elem__new-tick"></span>
+                    <span class="checkbox-elem__label">Удаленный</span>
+                  </label>
+                  <label class="checkbox-elem__container">
+                    <input
+                      type="checkbox"
+                      name="format"
+                      value="Гибкий"
+                      class="checkbox-elem"
+                    />
+                    <span class="checkbox-elem__new-tick"></span>
+                    <span class="checkbox-elem__label">Гибкий</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset class="filters__fieldset grid-area__experience">
+                <legend class="filters__legend">Опыт работы</legend>
+                <div class="filters__inputs-container">
+                  <label class="checkbox-elem__container">
+                    <input
+                      type="checkbox"
+                      name="experience"
+                      value="Не важно"
+                      class="checkbox-elem"
+                    />
+                    <span class="checkbox-elem__new-tick"></span>
+                    <span class="checkbox-elem__label">Не важно</span>
+                  </label>
+                  <label class="checkbox-elem__container">
+                    <input
+                      type="checkbox"
+                      name="experience"
+                      value="Без опыта"
+                      class="checkbox-elem"
+                    />
+                    <span class="checkbox-elem__new-tick"></span>
+                    <span class="checkbox-elem__label">Без опыта</span>
+                  </label>
+                  <label class="checkbox-elem__container">
+                    <input
+                      type="checkbox"
+                      name="experience"
+                      value="От 1 года до 3-х лет"
+                      class="checkbox-elem"
+                    />
+                    <span class="checkbox-elem__new-tick"></span>
+                    <span class="checkbox-elem__label"
+                      >От 1 года до 3-х лет</span
+                    >
+                  </label>
+                  <label class="checkbox-elem__container">
+                    <input
+                      type="checkbox"
+                      name="experience"
+                      value="От 3-х лет"
+                      class="checkbox-elem"
+                    />
+                    <span class="checkbox-elem__new-tick"></span>
+                    <span class="checkbox-elem__label">От 3-х лет</span>
+                  </label>
+                </div>
+              </fieldset>
+              <fieldset class="filters__fieldset grid-area__type">
+                <legend class="filters__legend">Занятость</legend>
+                <div class="filters__inputs-container">
+                  <label class="checkbox-elem__container">
+                    <input
+                      type="checkbox"
+                      name="type"
+                      value="Полная"
+                      class="checkbox-elem"
+                    />
+                    <span class="checkbox-elem__new-tick"></span>
+                    <span class="checkbox-elem__label">Полная</span>
+                  </label>
+                  <label class="checkbox-elem__container">
+                    <input
+                      type="checkbox"
+                      name="type"
+                      value="Частичная"
+                      class="checkbox-elem"
+                    />
+                    <span class="checkbox-elem__new-tick"></span>
+                    <span class="checkbox-elem__label">Частичная</span>
+                  </label>
+                  <label class="checkbox-elem__container">
+                    <input
+                      type="checkbox"
+                      name="type"
+                      value="Стажировка"
+                      class="checkbox-elem"
+                    />
+                    <span class="checkbox-elem__new-tick"></span>
+                    <span class="checkbox-elem__label">Стажировка</span>
+                  </label>
+
+                  <label class="checkbox-elem__container">
+                    <input
+                      type="checkbox"
+                      name="type"
+                      value="Проектная работа"
+                      class="checkbox-elem"
+                    />
+                    <span class="checkbox-elem__new-tick"></span>
+                    <span class="checkbox-elem__label">Проектная работа</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <div class="filters__buttons grid-area__buttons">
+                <button
+                  type="submit"
+                  class="button button_default filters__submit-button"
+                >
+                  Применить
+                </button>
+                <button
+                  type="reset"
+                  class="filters__buttons_reset filters__reset-button"
+                >
+                  Очистить
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <section class="vacancies-cards">
+            <h2 class="vacancies-cards__name visually_hidden">
+              Список вакансий
+            </h2>
+            <ul class="cards-list"></ul>
+          </section>
+        </div>
+      </main>
+
+      <footer class="foter">
+        <div class="link-to-main-page">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="17"
+            height="16"
+            viewBox="0 0 17 16"
+            fill="none"
+          >
+            <path d="M2 1H16V5" stroke="#171717" stroke-width="1.5" />
+            <path d="M15 13H1V9" stroke="#171717" stroke-width="1.5" />
+            <path d="M5 14.5H10.5" stroke="#171717" stroke-width="2" />
+          </svg>
+          <span
+            class="link-to-main-page__text link-to-main-page__text_emphasized-plain"
+            >Work</span
+          >
+          <span class="link-to-main-page__text"> Space</span>
+        </div>
+
+        <article class="copyrigh__container">
+          <span class="copyright__text">© Work Space, 2023</span>
+          <div class="developers__container">
+            <span class="copyright__text"
+              >Designer:
+              <a href="" target="_blanc" class="copyright__link"
+                >Anastasia Ilina</a
+              >
+            </span>
+            <span class="copyright__text"
+              >Developer:
+              <a
+                href="https://www.linkedin.com/in/tatyana-zakhozhaya/"
+                target="_blanc"
+                class="copyright__link"
+                >Tatyana Zakhozhaya</a
+              ></span
+            >
+          </div>
+        </article>
+      </footer>
+
+      <div class="modal modal_hidden">
+        <div class="modal__container">
+          <button class="modal__close">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g>
+                <path
+                  d="M10.7831 10L15.3887 5.39444C15.4797 5.28816 15.5272 5.15145 15.5218 5.01163C15.5164 4.87181 15.4585 4.73918 15.3595 4.64024C15.2606 4.5413 15.128 4.48334 14.9881 4.47794C14.8483 4.47254 14.7116 4.52009 14.6053 4.61111L9.99977 9.21666L5.39421 4.60555C5.2896 4.50094 5.14771 4.44217 4.99977 4.44217C4.85182 4.44217 4.70994 4.50094 4.60532 4.60555C4.50071 4.71017 4.44194 4.85205 4.44194 5C4.44194 5.14794 4.50071 5.28983 4.60532 5.39444L9.21643 10L4.60532 14.6056C4.54717 14.6554 4.49993 14.7166 4.46659 14.7856C4.43324 14.8545 4.4145 14.9296 4.41155 15.0061C4.40859 15.0826 4.42148 15.1589 4.44941 15.2302C4.47734 15.3015 4.51971 15.3662 4.57385 15.4204C4.62799 15.4745 4.69274 15.5169 4.76403 15.5448C4.83532 15.5727 4.91162 15.5856 4.98813 15.5827C5.06464 15.5797 5.13972 15.561 5.20864 15.5276C5.27757 15.4943 5.33885 15.447 5.38866 15.3889L9.99977 10.7833L14.6053 15.3889C14.7116 15.4799 14.8483 15.5275 14.9881 15.5221C15.128 15.5167 15.2606 15.4587 15.3595 15.3598C15.4585 15.2608 15.5164 15.1282 15.5218 14.9884C15.5272 14.8485 15.4797 14.7118 15.3887 14.6056L10.7831 10Z"
+                  fill="#CCCCCC"
+                />
+              </g>
+            </svg>
+          </button>
+          <div class="modal__info"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
